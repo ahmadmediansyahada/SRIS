@@ -20,8 +20,11 @@
 
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Datatables</h5>
-
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h5 class="card-title">Tabel Data Siswa</h5>
+              <a href="{{route('students.add')}}" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Tambah Data Siswa</a>
+          </div>
+          
             <!-- Table with stripped rows -->
             <table class="table datatable">
               <thead>

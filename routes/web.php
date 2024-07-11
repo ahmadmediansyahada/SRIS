@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ModulController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
@@ -27,5 +28,8 @@ Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard'
 
 
 Route::get('/dashboard/students', [StudentController::class, 'index'])->name('students.index');
+Route::get('/dashboard/students/add', [StudentController::class, 'add'])->name('students.add');
+Route::get('/dashboard/students/add/confirm', [StudentController::class, 'confirm'])->name('students.confirm');
 Route::get('/dashboard/teachers', [TeacherController::class, 'index'])->name('teachers.index');
+Route::get('/dashboard/moduls', [ModulController::class, 'index'])->name('moduls.index');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');

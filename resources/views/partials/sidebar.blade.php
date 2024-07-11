@@ -31,7 +31,7 @@
   </li><!-- Jadwal -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="#">
+    <a class="nav-link collapsed" href="{{route('moduls.index')}}">
       <i class="bi bi-book"></i><span>Modul Belajar</span></i>
     </a>
   </li><!-- Modul -->
@@ -52,9 +52,12 @@
   </li><!-- End Profile Page Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="pages-login.html">
+    <a class="nav-link collapsed" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
       <i class="bi bi-box-arrow-left"></i>
       <span>Log Out</span>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+      </form>
     </a>
   </li><!-- End Log Out Page Nav -->
 
